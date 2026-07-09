@@ -1,0 +1,101 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(2px 2px at 20% 30%,white,transparent),
+radial-gradient(2px 2px at 70% 60%,white,transparent),
+radial-gradient(2px 2px at 40% 80%,white,transparent),
+radial-gradient(1px 1px at 90% 20%,white,transparent),
+radial-gradient(2px 2px at 10% 70%,white,transparent);
+animation:twinkle 4s infinite alternate;
+opacity:.8;
+}
+
+@keyframes twinkle{
+from{opacity:.3;}
+to{opacity:1;}
+}
+
+#intro{
+text-align:center;
+z-index:10;
+padding:20px;
+}
+
+#title{
+font-size:42px;
+margin-bottom:20px;
+text-shadow:0 0 20px crimson;
+}
+
+#subtitle{
+font-size:22px;
+opacity:.8;
+margin-bottom:40px;
+}
+
+button{
+padding:18px 42px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:rgba(255,255,255,.08);
+color:white;
+backdrop-filter:blur(15px);
+transition:.35s;
+box-shadow:0 0 25px rgba(255,0,90,.35);
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px crimson;
+}
+
+#heartCanvas{
+position:fixed;
+width:100%;
+height:100%;
+display:none;
+}
+
+#loveSection{
+display:none;
+position:absolute;
+text-align:center;
+}
+
+#loveName{
+font-size:64px;
+color:#ff2d55;
+text-shadow:0 0 30px crimson;
+margin-bottom:25px;
+}
+
+#loveMessage{
+font-size:26px;
+margin-bottom:35px;
+min-height:60px;
+}
+
+#touchBtn{
+display:none;
+}
